@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portfolio Website - Contacts</title>
+  <link rel="shortcut icon" href="assets/img/favicon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.production.css">
+</head>
+<body>
+
+  <!-- header -->
+  <header class="page-header">
+
+    <!-- nav -->
+    <nav class="navigation-list header__item">
+      <!-- logo -->
+      <img class="logo header__item" src="assets/img/logo.png" alt="logo">
+      <ul role="menubar">
+        <li role="presentation">
+          <a href="index.html" role="menuitem">Home</a>
+        </li>
+        <li role="presentation">
+            <a href="about.html" role="menuitem">About Me</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem">Contact</a>
+        </li>
+        <li role="presentation">
+            <a href="contact.html" role="menuitem">Contact</a>
+        </li>
+      </ul>
+    </nav><!-- end nav -->
+    <div class="title-text">
+      <h1>Hey! I'm Benjamin X. Chang</h1>
+      <p>Front-end Developer</p>
+    </div>
+  </header><!-- end header -->
+
+
+  <section class="main">
+    <div class="inner-content">
+
+      <div class="contact-panel" alt="contact-panel">
+        <a href="tel:3856001261" alt="call tel:3856001261">
+          <div class="call-block"><i class="fa fa-phone"> 626-715-3593</i></div>
+        </a>
+        <a href="mailto:bxchang04@gmail.com" alt="email:bxchang04@gmail.com">
+          <div class="email-block"><i class="fa fa-envelope"> bxchang04@gmail.com</i></div>
+        </a>
+
+        <h1>Let's Connect!</h1>
+        <p>Got a project in mind? If so, let's a consultaiton going.</p>
+
+        <form id="contactForm" action="/" method="post" alt="Send it!">
+          <label for="email">Email </label>
+          <input id="email" type="email" required>
+          <label for="phone">Phone </label>
+          <input id="phone" type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
+          <label for="message">What would you like to say? </label>
+          <textarea id="message" required maxlength="240"></textarea>
+          <input id="sendBtn" type="submit" value="Send it!" alt="Send it!">
+        </form>
+
+      </div><!-- end contact panel -->
+    </div><!-- end inner-content -->
+  </section><!-- end main section -->
+
+  <!-- footer -->
+  <footer class="page-footer">
+      <p>Find me on</p>
+      <div class="social-media">
+
+        <a href="#"><img src="assets/img/facebook.png" alt="facebook icon"></a>
+        <a href="https://wwww.instagram.com/"><img src="assets/img/instagram.png" alt="instagram icon"></a>
+        <a href="https://www.twitter.com/"><img src="assets/img/twitter.png" alt="twitter icon"></a>
+      </div>
+    </footer>
+
+
+<!-- JS -->
+<script src="assets/js/tota11y.min.js"></script>
+</body>
+</html>

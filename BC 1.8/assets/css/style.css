@@ -1,0 +1,431 @@
+/* https://codepen.io/bxchang04/pen/GRRdgpG?editors=1100 */
+
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --dark-grey: #2b2b2b;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+/* Portfolio Website Styles */
+
+/* Globals */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300px;
+}
+
+//is button redundant here?
+p, a, input,  button, .button, label, textarea {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #05676e;
+}
+
+a:active {
+  color: #489c79;
+}
+
+button, .button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color: steelblue;
+  color: white;
+  text-decoration: none;
+  //text-decoration-color: white; //why isn't this working?
+  padding: 100px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+li {
+  list-style: none;
+}
+
+/* Header */
+
+header {
+  background: url(../img/contact-bg.png);
+  background-size: cover;
+  background-position: center right;
+  background-color: navy;
+  background-blend-mode: luminosity;
+
+  height: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 5px rgb(245, 245, 245);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 0 93%);
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 0 93%);
+}
+
+.title-text {
+  color: white;
+  line-height: .5;
+  position: absolute;
+  left: 65px;
+  top: 200px;
+
+}
+
+
+/* Nav */
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  padding: 15px 65px;
+  background: transparent;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.logo  {
+  float: left;
+  width: 125px;
+}
+
+nav ul {
+  float: right;
+}
+
+nav li {
+  display: inline;
+  padding: 0 0 0 25px;
+}
+
+nav a  {
+  color: white;
+  letter-spacing: 5px;
+  font-weight: 300;
+}
+
+
+/* Main Centered Content Areas / About Me Page  */
+.main {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: table;
+  position: relative;
+}
+
+.inner-content {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.inner-content img {
+  width: 225px;
+  text-align: center;
+  margin: 5%;
+
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+table {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+table tr:nth-child(odd) {
+  background: rgb(224, 224, 224);
+}
+
+/* Contact Page */
+
+.profile, .contact-panel {
+  margin: 0 auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px #0000001c;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.contact-panel h1 {
+  font-size: 34px;
+  font-weight: 300;
+}
+
+.contact-panel .fa  {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+}
+
+.contact-panel .call-block {
+  background: #1f1f1f;
+  width: 50%;
+  float: left;
+  padding: 25px 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.24) !important;
+  box-sizing: border-box;
+}
+
+.contact-panel .email-block {
+  background: #1f1f1f;
+  width: 50%;
+  float: left;
+  padding: 25px 0;
+  border: none;
+}
+
+.email-block:hover, .call-block:hover {
+  opacity: .9;
+}
+
+.contact-panel h1 {
+  padding: 100px 0 0 0;
+  color: #383838;
+}
+
+.contact-panel p {
+  padding-bottom: 50px;
+  color:#575757;
+}
+
+/* Contact Form */
+form {
+  padding: 0 25px 35px;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  margin: 20px 0;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  background:rgba(46, 29, 204, 0.075);
+  height: 55px;
+  color: #383838;
+}
+
+form textarea {
+  width: 100%;
+  height: 100px;
+  border: none;
+  background: rgba(46, 29, 204, 0.075);
+  font-size: 18px;
+  color: #383838);
+}
+
+form input:last-child {
+  border: none;
+  padding: 10px;
+  background: #0c1ba1;
+  border-radius: 100px;
+  color: white;
+  margin-top: 30px;
+  transition: .2s ease;
+}
+
+form input:last-child:hover {
+  opacity: .9;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+
+footer  {
+
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+//why are these two not the same? first works but second doesn't!
+
+footer img {
+  width: 25px;
+  padding: 10px 8px;
+}
+
+/*
+.social-media {
+  width: 25px;
+  padding: 10px 8px;
+} */
+
+
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  height: auto;
+  margin-right: 40px;
+  border-radius: 50%;
+
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+
+.page-footer {
+  clear: both;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+/* Grid fallback*/
+
+.grid__item {
+  display: inline-block;
+  width: 33%;
+}
+
+/* Styling CSS grid*/
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid__item {
+  background-color: LightGrey;
+  padding: 10px;
+  /* Set width to auto*/
+  width: auto;
+}
+
+.grid__item:last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+}
+
+.BostonBackground, .cloud{
+  text-align: center;
+  background-size: auto;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
