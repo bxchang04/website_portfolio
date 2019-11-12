@@ -25,7 +25,7 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 300px;
 }
 
-//is button redundant here?
+/* //is button redundant here? */
 p, a, input,  button, .button, label, textarea {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
@@ -55,7 +55,7 @@ button, .button {
   background-color: steelblue;
   color: white;
   text-decoration: none;
-  //text-decoration-color: white; //why isn't this working?
+  /* //text-decoration-color: white; //why isn't this working? */
   padding: 100px;
   border-radius: 3px;
   /* width of the border, type, color */
@@ -92,7 +92,7 @@ header {
   box-sizing: border-box;
   box-shadow: 5px 5px 5px rgb(245, 245, 245);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 0 93%);
-  clip-path: polygon(0 0, 100% 0, 100% 78%, 0 93%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 78%, 0 93%); */
 }
 
 .title-text {
@@ -257,7 +257,7 @@ form textarea {
   border: none;
   background: rgba(46, 29, 204, 0.075);
   font-size: 18px;
-  color: #383838);
+  color: #383838;
 }
 
 form input:last-child {
@@ -300,31 +300,6 @@ footer img {
   width: 25px;
   padding: 10px 8px;
 } */
-
-
-
-@media all and (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-@media all and (min-width: 500px) and (max-width: 750px){
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media all and (max-width: 750px) {
-  .grid {
-    grid-gap: 10px;
-  }
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-  h1 {
-    font-size: 20px;
-  }
-}
 
 .profile__portrait {
   float: left;
@@ -428,4 +403,27 @@ footer img {
 
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 20px;
+  }
 }
