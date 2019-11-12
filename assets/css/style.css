@@ -288,7 +288,7 @@ footer  {
 }
 
 
-//why are these two not the same? first works but second doesn't!
+/* //why are these two not the same? first works but second doesn't! */
 
 footer img {
   width: 25px;
