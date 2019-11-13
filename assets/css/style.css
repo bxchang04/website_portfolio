@@ -6,10 +6,8 @@ how do i remove underline on visited on nav?
 also, page rescales on each nav item click.
 nav color visited very ugly.
 visit linked in profile button bug --its huge now. color vars.
--bc*/
+-bc */
 
-
- 
 /* Globals */
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
 
@@ -21,7 +19,7 @@ visit linked in profile button bug --its huge now. color vars.
   --visited-color: lime;
   --active-color: #489c79;
   --border-bottom: rgba(0, 0, 0, 0.3);
-  --header-color: navy; /*why is this gray?? */
+  --header-color: navy; /* why is this gray?? */
   --white-color: rgb(245, 245, 245);
   --nth-child-color: rgb(224, 224, 224);
   --misc-color: #0000001c;
@@ -29,8 +27,7 @@ visit linked in profile button bug --its huge now. color vars.
   --gray-color: rgba(255, 255, 255, 0.24);
   --contact-color: #383838;
   --contact2-color: #575757;
-  --form-color:
-
+  --form-color: #575757;
 }
 
 a {
@@ -41,18 +38,30 @@ a {
   box-sizing: border-box;
 }
 
-html,body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Raleway', sans-serif;
   font-weight: 300px;
 }
 
 /* is button redundant here? */
-p, a, input,  button, .button, label, textarea{
+p,
+a,
+input,
+button,
+.button,
+label,
+textarea {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
@@ -72,19 +81,25 @@ a:active {
   color: var(--active-color);
 }
 
-.button, button {
+.button,
+button {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
+
   /* takes the font from the outer container */
+
   font-family: inherit;
+
   /* styles the button */
+
   background-color: var(--background-color);
   color: white;
   text-decoration: none;
   text-decoration-color: white;
   padding: 100px;
   border-radius: 3px;
+
   /* width of the border, type, color */
   border-bottom: 2px solid var(--border-bottom); /* what is this? */
   transition-duration: 0.2s;
@@ -97,6 +112,7 @@ button:focus,
 .button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
+
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
 }
@@ -112,26 +128,24 @@ header {
   background-size: cover;
   background-position: center right;
   background-color: navy;
-  /* background-color: var(--header-color); */
-  background-blend-mode: luminosity; /*blend breaks due to variable?? */
 
+  /* background-color: var(--header-color); */
+  background-blend-mode: luminosity; /* blend breaks due to variable?? */
   height: 400px;
   width: 100%;
   box-sizing: border-box;
   box-shadow: 5px 5px 5px var(--white-color);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 0 93%);
-  /* clip-path: polygon(0 0, 100% 0, 100% 78%, 0 93%); */
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 0 93%);
 }
 
 .title-text {
   color: var(--white-color);
-  line-height: .5;
+  line-height: 0.5;
   position: absolute;
   left: 65px;
   top: 200px;
-
 }
-
 
 /* Nav */
 
@@ -145,7 +159,7 @@ nav {
   z-index: 1000;
 }
 
-.logo  {
+.logo {
   float: left;
   width: 125px;
 }
@@ -159,12 +173,11 @@ nav li {
   padding: 0 0 0 25px;
 }
 
-nav a  {
+nav a {
   color: var(--white-color);
   letter-spacing: 5px;
   font-weight: 300;
 }
-
 
 /* Main Centered Content Areas / About Me Page  */
 .main {
@@ -186,7 +199,6 @@ nav a  {
   width: 225px;
   text-align: center;
   margin: 5%;
-
 }
 
 .profile {
@@ -208,7 +220,8 @@ table tr:nth-child(odd) {
 
 /* Contact Page */
 
-.profile, .contact-panel {
+.profile,
+.contact-panel {
   margin: 0 auto;
   max-width: 800px;
   border-radius: 10px;
@@ -222,7 +235,7 @@ table tr:nth-child(odd) {
   font-weight: 300;
 }
 
-.contact-panel .fa  {
+.contact-panel .fa {
   color: var(--white-color);
   font-size: 22px;
 }
@@ -244,12 +257,13 @@ table tr:nth-child(odd) {
   border: none;
 }
 
-.email-block:hover, .call-block:hover {
-  opacity: .9;
+.email-block:hover,
+.call-block:hover {
+  opacity: 0.9;
 }
 
 .contact-panel h1 {
-  padding: 100px 0 0 0;
+  padding: 100px 0 0;
   color: var(--contact-color);
 }
 
@@ -295,26 +309,24 @@ form input:last-child {
   border-radius: 100px;
   color: white;
   margin-top: 30px;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 form input:last-child:hover {
-  opacity: .9;
+  opacity: 0.9;
   cursor: pointer;
   transform: translateY(-2px);
 }
 
 /* Footer */
 
-footer  {
-
+footer {
   width: 100%;
   padding: 10px 0;
   box-sizing: border-box;
   text-align: center;
   margin-top: 10px;
 }
-
 
 /* why are these two not the same? first works but second doesn't! */
 
@@ -335,7 +347,6 @@ footer img {
   height: auto;
   margin-right: 40px;
   border-radius: 50%;
-
 }
 
 .page-header {
@@ -353,7 +364,6 @@ footer img {
   text-align: right;
 }
 
-
 .page-footer {
   clear: both;
   display: flex;
@@ -370,14 +380,14 @@ footer img {
   margin-left: 15px;
 }
 
-/* Grid fallback*/
+/* Grid fallback */
 
 .grid__item {
   display: inline-block;
   width: 33%;
 }
 
-/* Styling CSS grid*/
+/* Styling CSS grid */
 
 .grid {
   display: grid;
@@ -388,7 +398,8 @@ footer img {
 .grid__item {
   background-color: LightGrey;
   padding: 10px;
-  /* Set width to auto*/
+
+  /* Set width to auto */
   width: auto;
 }
 
@@ -397,12 +408,13 @@ footer img {
   grid-row: 1 / 3;
 }
 
-.BostonBackground, .cloud{
+.BostonBackground,
+.cloud {
   text-align: center;
   background-size: auto;
 }
 
-.clouds{
+.clouds {
   width: 10%;
   text-align: center;
 }
@@ -411,6 +423,7 @@ footer img {
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
@@ -425,6 +438,7 @@ footer img {
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
@@ -433,7 +447,6 @@ footer img {
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
   width: 5%;
-
 }
 
 @media all and (max-width: 500px) {
@@ -441,19 +454,23 @@ footer img {
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 20px;
   }
