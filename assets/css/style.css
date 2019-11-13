@@ -1,23 +1,45 @@
-/* https://codepen.io/bxchang04/pen/GRRdgpG?editors=1100 */
+/* Portfolio Website Styles */
 
-* {
-  box-sizing: border-box;
-}
+/* questions
+
+how do i remove underline on visited on nav?
+also, page rescales on each nav item click.
+nav color visited very ugly.
+visit linked in profile button bug --its huge now. color vars.
+-bc*/
+
+
+
+/* Globals */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
 
 :root {
   --primary-color: #357b70;
   --secondary-color: #e0b354;
   --dark-grey: #2b2b2b;
+  --background-color: steelblue;
+  --visited-color: lime;
+  --active-color: #489c79;
+  --border-bottom: rgba(0, 0, 0, 0.3);
+  --header-color: navy; /*why is this gray?? */
+  --white-color: rgb(245, 245, 245);
+  --nth-child-color: rgb(224, 224, 224);
+  --misc-color: #0000001c;
+  --misc2-color: #1f1f1f;
+  --gray-color: rgba(255, 255, 255, 0.24);
+  --contact-color: #383838;
+  --contact2-color: #575757;
+  --form-color:
+
 }
 
 a {
   color: var(--primary-color);
 }
 
-/* Portfolio Website Styles */
-
-/* Globals */
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+* {
+  box-sizing: border-box;
+}
 
 html,body {
   margin: 0;
@@ -29,8 +51,8 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 300px;
 }
 
-/* //is button redundant here? */
-p, a, input,  button, .button, label, textarea {
+/* is button redundant here? */
+p, a, input,  button, .button, label, textarea{
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
@@ -42,28 +64,29 @@ a:focus {
 }
 
 a:visited {
-  color: #05676e;
+  color: var(--visited-color);
+  text-decoration: none;
 }
 
 a:active {
-  color: #489c79;
+  color: var(--active-color);
 }
 
-button, .button {
+.button, button {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the button */
-  background-color: steelblue;
+  background-color: var(--background-color);
   color: white;
   text-decoration: none;
-  /* //text-decoration-color: white; //why isn't this working? */
+  text-decoration-color: white;
   padding: 100px;
   border-radius: 3px;
   /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid var(--border-bottom); /* what is this? */
   transition-duration: 0.2s;
   transition-property: opacity;
 }
@@ -89,18 +112,19 @@ header {
   background-size: cover;
   background-position: center right;
   background-color: navy;
-  background-blend-mode: luminosity;
+  /* background-color: var(--header-color); */
+  background-blend-mode: luminosity; /*blend breaks due to variable?? */
 
   height: 400px;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 5px 5px 5px rgb(245, 245, 245);
+  box-shadow: 5px 5px 5px var(--white-color);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 0 93%);
   /* clip-path: polygon(0 0, 100% 0, 100% 78%, 0 93%); */
 }
 
 .title-text {
-  color: white;
+  color: var(--white-color);
   line-height: .5;
   position: absolute;
   left: 65px;
@@ -136,7 +160,7 @@ nav li {
 }
 
 nav a  {
-  color: white;
+  color: var(--white-color);
   letter-spacing: 5px;
   font-weight: 300;
 }
@@ -179,7 +203,7 @@ table {
 }
 
 table tr:nth-child(odd) {
-  background: rgb(224, 224, 224);
+  background: var(--nth-child-color);
 }
 
 /* Contact Page */
@@ -188,7 +212,7 @@ table tr:nth-child(odd) {
   margin: 0 auto;
   max-width: 800px;
   border-radius: 10px;
-  box-shadow: 5px 5px 20px #0000001c;
+  box-shadow: 5px 5px 20px var(--misc-color);
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -199,7 +223,7 @@ table tr:nth-child(odd) {
 }
 
 .contact-panel .fa  {
-  color: rgb(255, 255, 255);
+  color: var(--white-color);
   font-size: 22px;
 }
 
@@ -208,12 +232,12 @@ table tr:nth-child(odd) {
   width: 50%;
   float: left;
   padding: 25px 0;
-  border-right: 1px solid rgba(255, 255, 255, 0.24) !important;
+  border-right: 1px solid var(--gray-color) !important;
   box-sizing: border-box;
 }
 
 .contact-panel .email-block {
-  background: #1f1f1f;
+  background: var(--misc2-color);
   width: 50%;
   float: left;
   padding: 25px 0;
@@ -226,12 +250,12 @@ table tr:nth-child(odd) {
 
 .contact-panel h1 {
   padding: 100px 0 0 0;
-  color: #383838;
+  color: var(--contact-color);
 }
 
 .contact-panel p {
   padding-bottom: 50px;
-  color:#575757;
+  color: var(--contact2-color);
 }
 
 /* Contact Form */
@@ -250,18 +274,18 @@ form input {
   width: 100%;
   border: none;
   font-size: 18px;
-  background:rgba(46, 29, 204, 0.075);
+  background: var(--form-color);
   height: 55px;
-  color: #383838;
+  color: var(--contact-color);
 }
 
 form textarea {
   width: 100%;
   height: 100px;
   border: none;
-  background: rgba(46, 29, 204, 0.075);
+  background: var(--form-color);
   font-size: 18px;
-  color: #383838;
+  color: var(--contact-color);
 }
 
 form input:last-child {
@@ -292,7 +316,7 @@ footer  {
 }
 
 
-/* //why are these two not the same? first works but second doesn't! */
+/* why are these two not the same? first works but second doesn't! */
 
 footer img {
   width: 25px;
@@ -337,7 +361,6 @@ footer img {
   flex-direction: column;
 }
 
-
 .navigation-list {
   list-style-type: none;
 }
@@ -379,6 +402,11 @@ footer img {
   background-size: auto;
 }
 
+.clouds{
+  width: 10%;
+  text-align: center;
+}
+
 @keyframes cloud-move {
   from {
     transform: translate(0, 50px);
@@ -390,6 +418,7 @@ footer img {
 
 .cloud-front {
   animation: 30s cloud-move infinite alternate linear;
+  width: 5%;
 }
 
 @keyframes cloud-move-reverse {
@@ -403,6 +432,8 @@ footer img {
 
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
+  width: 5%;
+
 }
 
 @media all and (max-width: 500px) {

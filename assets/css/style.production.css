@@ -1,13 +1,30 @@
-/* https://codepen.io/bxchang04/pen/GRRdgpG?editors=1100 */
+/* Portfolio Website Styles */
+
+/* questions
+
+how do i remove underline on visited on nav?
+also, page rescales on each nav item click.
+nav color visited very ugly.
+visit linked in profile button bug --its huge now. color vars.
+-bc*/
+
+
+
+/* Globals */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+
+:root { /*why is this gray?? */
+
+}
 
 a {
   color: #357b70;
 }
 
-/* Portfolio Website Styles */
-
-/* Globals */
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 html,body {
   margin: 0;
@@ -19,8 +36,8 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 300px;
 }
 
-//is button redundant here?
-p, a, input,  button, .button, label, textarea {
+/* is button redundant here? */
+p, a, input,  button, .button, label, textarea{
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
@@ -32,11 +49,60 @@ a:focus {
 }
 
 a:visited {
-  color: #05676e;
+  color: lime;
+  text-decoration: none;
 }
 
 a:active {
   color: #489c79;
+}
+
+.button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color: steelblue;
+  color: white;
+  text-decoration: none;
+  -webkit-text-decoration-color: white;
+          text-decoration-color: white;
+  padding: 100px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3); /* what is this? */
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color: steelblue;
+  color: white;
+  text-decoration: none;
+  -webkit-text-decoration-color: white;
+          text-decoration-color: white;
+  padding: 100px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3); /* what is this? */
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
 }
 
 button:hover,
@@ -60,7 +126,8 @@ header {
   background-size: cover;
   background-position: center right;
   background-color: navy;
-  background-blend-mode: luminosity;
+  /* background-color: var(--header-color); */
+  background-blend-mode: luminosity; /*blend breaks due to variable?? */
 
   height: 400px;
   width: 100%;
@@ -69,11 +136,11 @@ header {
   -webkit-box-shadow: 5px 5px 5px rgb(245, 245, 245);
           box-shadow: 5px 5px 5px rgb(245, 245, 245);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 0 93%);
-  clip-path: polygon(0 0, 100% 0, 100% 78%, 0 93%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 78%, 0 93%); */
 }
 
 .title-text {
-  color: white;
+  color: rgb(245, 245, 245);
   line-height: .5;
   position: absolute;
   left: 65px;
@@ -110,7 +177,7 @@ nav li {
 }
 
 nav a  {
-  color: white;
+  color: rgb(245, 245, 245);
   letter-spacing: 5px;
   font-weight: 300;
 }
@@ -158,7 +225,18 @@ table tr:nth-child(odd) {
 
 /* Contact Page */
 
-.profile, .contact-panel {
+.profile {
+  margin: 0 auto;
+  max-width: 800px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 20px #0000001c;
+          box-shadow: 5px 5px 20px #0000001c;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.contact-panel {
   margin: 0 auto;
   max-width: 800px;
   border-radius: 10px;
@@ -175,7 +253,7 @@ table tr:nth-child(odd) {
 }
 
 .contact-panel .fa  {
-  color: rgb(255, 255, 255);
+  color: rgb(245, 245, 245);
   font-size: 22px;
 }
 
@@ -208,7 +286,7 @@ table tr:nth-child(odd) {
 
 .contact-panel p {
   padding-bottom: 50px;
-  color:#575757;
+  color: #575757;
 }
 
 /* Contact Form */
@@ -227,7 +305,7 @@ form input {
   width: 100%;
   border: none;
   font-size: 18px;
-  background:rgba(46, 29, 204, 0.075);
+  background: ;
   height: 55px;
   color: #383838;
 }
@@ -236,9 +314,9 @@ form textarea {
   width: 100%;
   height: 100px;
   border: none;
-  background: rgba(46, 29, 204, 0.075);
+  background: ;
   font-size: 18px;
-  color: #383838);
+  color: #383838;
 }
 
 form input:last-child {
@@ -273,6 +351,9 @@ footer  {
   margin-top: 10px;
 }
 
+
+/* why are these two not the same? first works but second doesn't! */
+
 footer img {
   width: 25px;
   padding: 10px 8px;
@@ -283,33 +364,6 @@ footer img {
   width: 25px;
   padding: 10px 8px;
 } */
-
-
-
-@media all and (max-width: 500px) {
-  .grid {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
-}
-@media all and (min-width: 500px) and (max-width: 750px){
-  .grid {
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media all and (max-width: 750px) {
-  .grid {
-    grid-gap: 10px;
-  }
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-  h1 {
-    font-size: 20px;
-  }
-}
 
 .profile__portrait {
   float: left;
@@ -352,12 +406,6 @@ footer img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .navigation-list {
@@ -406,6 +454,11 @@ footer img {
   background-size: auto;
 }
 
+.clouds{
+  width: 10%;
+  text-align: center;
+}
+
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
@@ -431,6 +484,7 @@ footer img {
 .cloud-front {
   -webkit-animation: 30s cloud-move infinite alternate linear;
           animation: 30s cloud-move infinite alternate linear;
+  width: 5%;
 }
 
 @-webkit-keyframes cloud-move-reverse {
@@ -458,4 +512,31 @@ footer img {
 .cloud-back {
   -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
           animation: 34s cloud-move-reverse infinite alternate linear;
+  width: 5%;
+
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 20px;
+  }
 }
