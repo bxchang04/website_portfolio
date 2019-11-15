@@ -6,7 +6,15 @@ how do i remove underline on visited on nav?
 also, page rescales on each nav item click.
 nav color visited very ugly.
 visit linked in profile button bug --its huge now. color vars.
+
+centering-
+It looks like you can use percentages to set it to 50% of the container. 
+Here is a guide to help you out. https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate
+
+
 -bc */
+
+
 
 /* Globals */
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
@@ -129,7 +137,7 @@ header {
   background-position: center right;
   background-color: navy;
 
-  /* background-color: var(--header-color); */
+  background-color: var(--header-color);
   background-blend-mode: luminosity; /* blend breaks due to variable?? */
   height: 400px;
   width: 100%;
@@ -415,7 +423,7 @@ footer img {
 }
 
 .clouds {
-  width: 10%;
+  width: 100%;
   text-align: center;
 }
 
@@ -431,7 +439,7 @@ footer img {
 
 .cloud-front {
   animation: 30s cloud-move infinite alternate linear;
-  width: 5%;
+  /* width: 50%; */
 }
 
 @keyframes cloud-move-reverse {
@@ -446,7 +454,7 @@ footer img {
 
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
-  width: 5%;
+  /* width: 50%; */
 }
 
 @media all and (max-width: 500px) {
