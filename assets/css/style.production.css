@@ -49,7 +49,7 @@ a:focus {
 }
 
 a:visited {
-  color: lime;
+  color: yellow;
 }
 
 a:active {
@@ -125,13 +125,13 @@ li {
 /* Header */
 
 header {
-  background: url(../img/contact-bg.png);
+  background: url(../img/header.jpg);
   background-size: cover;
   background-position: center right;
   background-color: black;
   /* background-blend-mode: luminosity; blend breaks due to variable?? */
 
-  height: 400px;
+  height: 300px;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -146,7 +146,7 @@ header {
   line-height: .5;
   position: absolute;
   left: 65px;
-  top: 200px;
+  top: 100px;
 
 }
 
@@ -175,13 +175,13 @@ nav ul {
 
 nav li {
   display: inline;
-  padding: 0 0 0 25px;
+  padding: 0 0 0 50px;
 }
 
 nav a  {
   color: rgb(245, 245, 245);
-  letter-spacing: 5px;
-  font-weight: 300;
+  letter-spacing: 3px;
+  font-weight: 520;
 }
 
 
@@ -259,7 +259,7 @@ table tr:nth-child(odd) {
 }
 
 .contact-panel .call-block {
-  background: #1f1f1f;
+  background: navy;
   width: 50%;
   float: left;
   padding: 25px 0;
@@ -269,7 +269,7 @@ table tr:nth-child(odd) {
 }
 
 .contact-panel .email-block {
-  background: #1f1f1f;
+  background: cornflowerblue;
   width: 50%;
   float: left;
   padding: 25px 0;
@@ -362,7 +362,7 @@ footer  {
 /* why are these two not the same? first works but second doesn't! */
 
 footer img {
-  width: 25px;
+  width: 50px;
   padding: 10px 8px;
 }
 
@@ -547,4 +547,3 @@ footer img {
     font-size: 20px;
   }
 }
-

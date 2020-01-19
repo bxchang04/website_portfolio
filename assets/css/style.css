@@ -8,7 +8,7 @@ nav color visited very ugly.
 visit linked in profile button bug --its huge now. color vars.
 
 centering-
-It looks like you can use percentages to set it to 50% of the container. 
+It looks like you can use percentages to set it to 50% of the container.
 Here is a guide to help you out. https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate
 
 
@@ -31,7 +31,7 @@ Here is a guide to help you out. https://developer.mozilla.org/en-US/docs/Web/CS
   --white-color: rgb(245, 245, 245);
   --nth-child-color: rgb(224, 224, 224);
   --misc-color: #0000001c;
-  --misc2-color: #1f1f1f;
+  --misc2-color: navy;
   --gray-color: rgba(255, 255, 255, 0.24);
   --contact-color: #383838;
   --contact2-color: #575757;
@@ -135,13 +135,10 @@ li {
 /* Header */
 
 header {
-  background: url(../img/contact-bg.png);
+  background: url(../img/header.jpg);
   background-size: cover;
   background-position: center right;
   background-color: navy;
-
-  background-color: var(--header-color);
-  /* background-blend-mode: luminosity; blend breaks due to variable?? */
   height: 400px;
   width: 100%;
   box-sizing: border-box;
@@ -170,24 +167,19 @@ nav {
   z-index: 1000;
 }
 
-.logo {
-  float: left;
-  width: 125px;
-}
-
 nav ul {
   float: right;
 }
 
 nav li {
   display: inline;
-  padding: 0 0 0 25px;
+  padding: 0 0 0 60px;
 }
 
 nav a {
-  color: var(--white-color);
-  letter-spacing: 5px;
-  font-weight: 300;
+  color: rgb(245, 245, 245);
+  letter-spacing: 3px;
+  font-weight: 520;
 }
 
 /* Main Centered Content Areas / About Me Page  */
@@ -251,7 +243,7 @@ table tr:nth-child(odd) {
 }
 
 .contact-panel .call-block {
-  background: #1f1f1f;
+  background: var(--misc2-color);
   width: 50%;
   float: left;
   padding: 25px 0;
@@ -341,7 +333,7 @@ footer {
 /* why are these two not the same? first works but second doesn't! */
 
 footer img {
-  width: 25px;
+  width: 50px;
   padding: 10px 8px;
 }
 
