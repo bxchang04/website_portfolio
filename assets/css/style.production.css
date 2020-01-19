@@ -529,8 +529,8 @@ footer img {
   }
   .grid__item:last-child {
     grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
+/*    grid-row: auto / auto;
+*/  }
   h1 {
     font-size: 22px;
   }
