@@ -336,6 +336,10 @@ form input:last-child:hover {
   padding: 50px;
 }
 
+.link {
+  font-weight: bold;;
+}
+
 /* Footer */
 
 footer  {
