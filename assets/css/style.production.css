@@ -2,6 +2,12 @@
 /* Globals */
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
 
+*,
+*::before,
+*::after{
+	box-sizing: border-box
+}
+
 :root {
   /*why is this gray?? */
 }
@@ -120,7 +126,7 @@ header {
   background-position: center right;
   background-color: black;
   /* background-blend-mode: luminosity; blend breaks due to variable?? */
-  height: 300px;
+  height: 250px;
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -140,7 +146,7 @@ header {
 
 /* Nav */
 nav {
-  position: fixed;
+  position: sticky;
   /* try position: sticky; top: 0; */
   width: 100%;
   height: 65px;
@@ -187,7 +193,7 @@ nav a {
 }
 
 .inner-content img {
-  width: 200px;
+  width: 150px;
   text-align: center;
   /* margin: 5px; */
 }
@@ -195,7 +201,7 @@ nav a {
 .profile {
   max-width: 700px;
   margin: 0 auto;
-  padding: 100px;
+  padding: 50px;
 }
 
 table {
@@ -331,7 +337,6 @@ form input:last-child:hover {
 
 .link {
   font-weight: bold;
-  ;
 }
 
 /* Footer */
@@ -436,13 +441,20 @@ footer img {
   width: auto;
 }
 
-.BostonBackground, .cloud {
+.BostonBackground {
   text-align: center;
   background-size: auto;
+  width: 100%;
+}
+
+.boston__img {
+  background-size: cover;
+  width: 100%;
 }
 
 .clouds {
   width: 100%;
+  height: 10%;
   text-align: center;
 }
 
@@ -473,37 +485,37 @@ footer img {
 .cloud-front {
   -webkit-animation: 30s cloud-move infinite alternate linear;
   animation: 30s cloud-move infinite alternate linear;
-  width: 100px;
+  width: 10%;
 }
 
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
+    transform: translate(100px, 18px);
   }
 
   to {
     -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
+    transform: translate(-200px, 18px);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
+    transform: translate(100px, 18px);
   }
 
   to {
     -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
+    transform: translate(-200px, 18px);
   }
 }
 
 .cloud-back {
   -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
   animation: 34s cloud-move-reverse infinite alternate linear;
-  width: 100px;
+  width: 10%;
 }
 
 @media all and (max-width: 500px) {
